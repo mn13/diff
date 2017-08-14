@@ -1,0 +1,19 @@
+{
+  "name": "gendiff-nm",
+  "version": "0.1.0",
+  "description": "Compares two configuration files and shows a difference",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mn13/project-lvl2-s117.git"
+  },
+  "author": "nma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mn13/project-lvl2-s117/issues"
+  },
+  "homepage": "https://github.com/mn13/project-lvl2-s117#readme"
+}
