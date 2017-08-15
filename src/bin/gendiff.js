@@ -1,9 +1,4 @@
 #!/usr/bin/env node
-import commander from 'commander';
+import start from '../lib';
 
-commander
-  .version('0.1.0')
-  .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'Output format')
-  .arguments('<firstConfig> <secondConfig>')
-  .parse(process.argv);
+start();
