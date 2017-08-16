@@ -8,5 +8,5 @@ commander
   .description(pjson.description)
   .option('-f, --format [type]', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
-  .action(genDiff(firstConfig, secondConfig))
+  .action((firstConfig, secondConfig) => genDiff(firstConfig, secondConfig))
   .parse(process.argv);
