@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/mn13/project-lvl2-s117#readme",
   "dependencies" : {
-    "commander": "*"
+    "commander": "*",
+    "lodash": "*"
   },
   "devDependencies": {
     "babel-cli": "*",
