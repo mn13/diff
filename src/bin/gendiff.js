@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import commander from 'commander';
-import genDiff from '../lib/genDiffLib';
+import genDiff from '../genDiffLib';
 import pjson from '../../package.json';
 
 commander
