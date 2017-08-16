@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import commander from 'commander';
-import genDiff from '../lib';
+import genDiff from '../lib/genDiffLib';
 import pjson from '../../package.json';
 
 commander
@@ -8,5 +8,5 @@ commander
   .description(pjson.description)
   .option('-f, --format [type]', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
-  .action(genDiff)
+  .action(genDiff())
   .parse(process.argv);
