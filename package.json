@@ -7,7 +7,7 @@
   },
   "main": "dist/genDiffLib.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build",
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/mn13/project-lvl2-s117#readme",
   "dependencies" : {
     "commander": "*",
-    "lodash": "*"
+    "lodash": "*",
+    "js-yaml": "*"
   },
   "devDependencies": {
     "babel-cli": "*",
