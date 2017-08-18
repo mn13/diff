@@ -1,10 +1,9 @@
+import fs from 'fs';
+import path from 'path';
 import _ from 'lodash';
 import parse from './parse';
 
-export default (pathToFile1, pathToFile2) => {
-  const content1 = parse(pathToFile1);
-  const content2 = parse(pathToFile2);
-
+const genDiff = (content1, content2) => {
   const union = _.union(Object.keys(content1), Object.keys(content2));
   const result = union.reduce((acc, key) => {
     if (content1[key] === content2[key]) {
@@ -21,4 +20,11 @@ export default (pathToFile1, pathToFile2) => {
   }, '');
 
   return `{\n${result}}`;
+};
+
+export default (pathToFile1, pathToFile2) => {
+  const content1 = parse(fs.readFileSync(pathToFile1, 'utf-8'), path.extname(pathToFile1));
+  const content2 = parse(fs.readFileSync(pathToFile2, 'utf-8'), path.extname(pathToFile1));
+
+  return genDiff(content1, content2);
 };
